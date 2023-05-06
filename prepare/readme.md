@@ -107,6 +107,3 @@ source_dir/
             ...
 ```
 
-Note that 
-
-
