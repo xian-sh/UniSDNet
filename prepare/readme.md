@@ -2,7 +2,7 @@
 
 the full dataset available on Google and Baidu drives. Please fill in this [request form](https://docs.google.com/forms/d/e/1FAIpQLSeKaFq9ZfcmZ7W0B0PbEhfbTHY41GeEgwsa7WobJgGUhn4DTQ/viewform) to have a 7-day-access to download the videos from the drive folders. 
 
-more details look in the link:http://activity-net.org/download.html
+more details look at the link:http://activity-net.org/download.html
 
 what files are you need?
 
@@ -43,8 +43,6 @@ caption file include audio(**all record of video related captions**):
     look at the 'root/dataset/ActivityNet/' folder, which includes '{train/val/test}_audio.json'
 
 ## Step3: Split data(if you want to do the work by starting with feature extraction from video):
-
-please use fiftyone tool:https://docs.voxel51.com/integrations/activitynet.html#activitynet-full-split-downloads
 
 ```bash
 pip install fiftyone
@@ -113,3 +111,4 @@ source_dir/
             ...
 ```
 
+Reference: https://docs.voxel51.com/integrations/activitynet.html#activitynet-full-split-downloads
