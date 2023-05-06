@@ -20,7 +20,9 @@ source_dir/
 
 you can also get the v1-2 and v1-3 data through the baidu disk link I shared with you: https://pan.baidu.com/s/1LUcCE5vQoZEcenaBqExKwA?pwd=mo4k
 
-### Or you can download ActivityNet dataset's C3D feature data from: https://cs.stanford.edu/people/ranjaykrishna/densevid/
+### Or you can download ActivityNet dataset's C3D feature data from: 
+
+https://cs.stanford.edu/people/ranjaykrishna/densevid/
 
 ## Step2: Download the caption data:
 
