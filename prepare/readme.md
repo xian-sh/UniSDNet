@@ -56,7 +56,7 @@ import fiftyone.zoo as foz
 source_dir = "/path/to/dir-with-activitynet-files"
 
 # make a new dir to store the dataset
-download_dir = r'G:\ActivityNetDataset\activitynet-200'
+download_dir = r'/path/to/save/activitynet-200'
 
 # use a disk with more space to store the dataset, default is C:\Users\user\fiftyone
 fo.config.dataset_zoo_dir = download_dir  
