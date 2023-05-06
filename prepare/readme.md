@@ -16,7 +16,12 @@ caption file include audio(**all record of video related captions**):
 
 please use fiftyone tool:https://docs.voxel51.com/integrations/activitynet.html#activitynet-full-split-downloads
 
+```bash
+pip install fiftyone
 ```
+
+
+```python
 import fiftyone as fo
 import fiftyone.zoo as foz
 
