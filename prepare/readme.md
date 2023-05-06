@@ -44,6 +44,8 @@ caption file include audio(**all record of video related captions**):
 
 ## Step3: Split data(if you want to do the work by starting with feature extraction from video):
 
+Note that above caption files are correspond to Anet1.3(activitynet-200),so if you want to get the whole videos split corresponding to the captions, you should execute the following code. 
+
 ```bash
 pip install fiftyone
 ```
