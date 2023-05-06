@@ -1,4 +1,4 @@
-# Firstly, you should prepare video dat and audio data,look at the 'root/prepare/' folder for more details
+# Firstly, you should prepare video data and audio data,look at the 'root/prepare/' folder for more details
 
 ## Step2: Download the caption data:
 
