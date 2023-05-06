@@ -4,6 +4,23 @@ the full dataset available on Google and Baidu drives. Please fill in this [requ
 
 more details look in the link:http://activity-net.org/download.html
 
+what files are you need?
+
+```bash
+source_dir/
+    missing_files.zip
+    missing_files_v1-2_test.zip
+    missing_files_v1-3_test.zip
+    v1-2_test.tar.gz
+    v1-2_train.tar.gz
+    v1-2_val.tar.gz
+    v1-3_test.tar.gz
+    v1-3_train_val.tar.gz
+```
+
+you can also get the v1-2 and v1-3 data through the baidu disk link I shared with you: https://pan.baidu.com/s/1LUcCE5vQoZEcenaBqExKwA?pwd=mo4k
+
+
 ## Step2: Download the caption data:
 
 the original split(no audio):   https://cs.stanford.edu/people/ranjaykrishna/densevid/
