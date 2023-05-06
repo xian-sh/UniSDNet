@@ -57,10 +57,16 @@ import fiftyone.zoo as foz
 
 source_dir = "/path/to/dir-with-activitynet-files"
 
+# make a new dir to store the dataset
+download_dir = r'G:\ActivityNetDataset\activitynet-200'
+
+# use a disk with more space to store the dataset, default is C:\Users\user\fiftyone
+fo.config.dataset_zoo_dir = download_dir  
+fo.config.default_dataset_dir = download_dir
+print(fo.config)
+
 # Load the entire ActivityNet 200 dataset into FiftyOne
-# choice ("train", "validation", "test"),since windows C disk is short of memory,you can use 'split' parameter to download the data partly, and move the data to another disk(such D disk) in time.
-dataset = foz.load_zoo_dataset("activitynet-200", source_dir=source_dir, split="train")
-# dataset = foz.load_zoo_dataset("activitynet-200", source_dir=source_dir)
+dataset = foz.load_zoo_dataset(r"activitynet-200", source_dir=source_dir)
 
 session = fo.launch_app(dataset)
 ```
