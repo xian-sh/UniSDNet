@@ -12,7 +12,7 @@ caption file include audio(**record per caption individually**): look at the **'
 
 caption file include audio(**all record of video related captions**):look at the **'root/data/ActivityNet/'** folder, which includes **'{train/val/test}_audio.json'**
 
-# Step3: split data:
+## Step3: split data:
 
 please use fiftyone tool:https://docs.voxel51.com/integrations/activitynet.html#activitynet-full-split-downloads
 
