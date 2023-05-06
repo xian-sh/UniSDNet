@@ -8,9 +8,9 @@ more details look in the link:http://activity-net.org/download.html
 
 the original split(no audio):   https://cs.stanford.edu/people/ranjaykrishna/densevid/
 
-caption file include audio(**record per caption individually**): 
+caption file include audio(**record per caption individually**): look at the 'root/data/ActivityNet/' folder, which includes 'new_{train/val/test}_data.json'
 
-caption file include audio(**all record of video related captions**):
+caption file include audio(**all record of video related captions**):look at the 'root/data/ActivityNet/' folder, which includes '{train/val/test}_audio.json'
 
 # how to split data:
 
@@ -46,3 +46,34 @@ source_dir/
     v1-3_test.tar.gz
     v1-3_train_val.tar.gz
 ```
+If you have already decompressed the archives, that is okay too:
+
+```bash
+source_dir/
+    missing_files/
+        v_<id>.<ext>
+        ...
+    missing_files_v1-2_test/
+        v_<id>.<ext>
+        ...
+    missing_files_v_1-3_test/
+        v_<id>.<ext>
+        ...
+    v1-2/
+        train/
+            v_<id>.<ext>
+            ...
+        val/
+            ...
+        test/
+            ...
+    v1-3/
+        train_val/
+            v_<id>.<ext>
+            ...
+        test/
+            ...
+```
+
+
+
