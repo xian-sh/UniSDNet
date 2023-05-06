@@ -8,15 +8,15 @@ more details look in the link:http://activity-net.org/download.html
 
 the original split(no audio):   https://cs.stanford.edu/people/ranjaykrishna/densevid/
     
-    or look at the **'root/data/ActivityNet/'** folder, which includes **'{train/val/test}.json'**
+or look at the **'root/data/ActivityNet/'** folder, which includes **'{train/val/test}.json'**
 
 caption file include audio(**record per caption individually**): 
 
-    look at the **'root/data/ActivityNet/'** folder, which includes **'new_{train/val/test}_data.json'**
+look at the **'root/data/ActivityNet/'** folder, which includes **'new_{train/val/test}_data.json'**
 
 caption file include audio(**all record of video related captions**):
     
-    look at the **'root/data/ActivityNet/'** folder, which includes **'{train/val/test}_audio.json'**
+look at the **'root/data/ActivityNet/'** folder, which includes **'{train/val/test}_audio.json'**
 
 ## Step3: split data:
 
