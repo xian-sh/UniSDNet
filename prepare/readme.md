@@ -58,7 +58,9 @@ import fiftyone.zoo as foz
 source_dir = "/path/to/dir-with-activitynet-files"
 
 # Load the entire ActivityNet 200 dataset into FiftyOne
-dataset = foz.load_zoo_dataset("activitynet-200", source_dir=source_dir)
+# choice ("train", "validation", "test"),since windowsm C disk is short of memory,you can use 'split' parameter to download the data partly, and move the data to another disk(such D disk) in time.
+dataset = foz.load_zoo_dataset("activitynet-200", source_dir=source_dir, split="train")
+# dataset = foz.load_zoo_dataset("activitynet-200", source_dir=source_dir)
 
 session = fo.launch_app(dataset)
 ```
@@ -105,5 +107,6 @@ source_dir/
             ...
 ```
 
+Note that 
 
 
