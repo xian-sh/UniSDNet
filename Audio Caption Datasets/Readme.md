@@ -1,6 +1,6 @@
-#How do we make audio caption datasets?
+# How do we make audio caption datasets?
 
-In the VGCL paper, 58 volunteers are asked to fluently read the text in a clean surrounding environment to obtain the sudio dataset corresponding to AncitivyNet Caption Dataset.
+In the [VGCL paper](https://arxiv.org/pdf/2209.00277.pdf), 58 volunteers are asked to fluently read the text in a clean surrounding environment to obtain the sudio dataset corresponding to AncitivyNet Caption Dataset.
 
 However, in our paper, we use machine simulation of human voice to synthesize audio subtitle datasets corresponding to Charades-STA Caption dataset and TACoS Caption Dataset.
 
