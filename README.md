@@ -13,4 +13,7 @@
 
 ### Dependencies
 
-* yacs h5py terminaltables tqdm pytorch transformers pyG librosa
+* pip install yacs h5py terminaltables tqdm librosa transformers
+* conda install pytorch==1.11.0 torchvision==0.12.0 torchaudio==0.11.0 cudatoolkit=11.3 -c pytorch
+* conda config --add channels pytorch
+* conda install pytorch-geometric -c rusty1s -c conda-forge
