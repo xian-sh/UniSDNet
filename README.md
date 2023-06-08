@@ -11,3 +11,6 @@
 * **Charades-STA Speech Dataset:** download the [original audio](https://drive.google.com/file/d/11f6sC94Swov_opNfpleTlVGyLJDFS5IW/view?usp=sharing) proposed by us.
 * **TACoS Speech Dataset:** download the [original audio](https://drive.google.com/file/d/11f6sC94Swov_opNfpleTlVGyLJDFS5IW/view?usp=sharing) proposed by us.
 
+### Dependencies
+
+* yacs h5py terminaltables tqdm pytorch transformers pyG librosa
