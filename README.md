@@ -8,8 +8,8 @@
 ### Audio Caption Datasets
 
 * **ActivityNet Speech Dataset:** download the [original audio](https://drive.google.com/file/d/11f6sC94Swov_opNfpleTlVGyLJDFS5IW/view?usp=sharing) proposed by [VGCL](https://github.com/marmot-xy/Spoken-Video-Grounding)
-* **Charades-STA Speech Dataset:** download the [original audio](https://drive.google.com/file/d/11f6sC94Swov_opNfpleTlVGyLJDFS5IW/view?usp=sharing) proposed by us.
-* **TACoS Speech Dataset:** download the [original audio](https://drive.google.com/file/d/11f6sC94Swov_opNfpleTlVGyLJDFS5IW/view?usp=sharing) proposed by us.
+* **Charades-STA Speech Dataset:** download the [original audio](https://zenodo.org/record/8019213) proposed by us.
+* **TACoS Speech Dataset:** download the [original audio](https://zenodo.org/record/8016202) proposed by us.
 
 ### Dependencies
 
