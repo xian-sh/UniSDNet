@@ -135,13 +135,13 @@ def TACoS_text_microsoft_mav(root_path, text_path, audios_dir):
 
 
 if __name__ == "__main__":
-    # root_path = r"G:\ActivityNet_code\Data2vec_MMN\dataset\Charades_STA"
-    root_path = r"G:\ActivityNet_code\Data2vec_MMN\dataset\TACoS"
+    # root_path = r".\Charades_STA"
+    root_path = r".\TACoS"
     train_path = os.path.join(root_path, "train.json")
     val_path = os.path.join(root_path, "val.json")
     test_path = os.path.join(root_path, "test.json")
 
-    audios_dir = r"G:\ActivityNetDataset\data\TACoS\audios"
+    audios_dir = r".\TACoS\audios"
 
     # Charades_STA: train:5336  test:1334
     # TACoS: train:75  val:27    test: 25
