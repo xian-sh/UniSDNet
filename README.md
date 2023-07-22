@@ -5,13 +5,17 @@
 
 * Download the [video feature](https://rochester.app.box.com/s/8znalh6y5e82oml2lr7to8s6ntab6mav)  provided by [2D-TAN](https://github.com/microsoft/2D-TAN)
 * Download the video I3D feature of Charades-STA dataset from [LGI](https://github.com/JonghwanMun/LGI4temporalgrounding)
-     ```python
+     ```
       wget http://cvlab.postech.ac.kr/research/LGI/charades_data.tar.gz
       tar zxvf charades_data.tar.gz
       mv charades data
       rm charades_data.tar.gz
     ```
 * Download the video C3D feature of Charades-STA dataset from [DRN](https://github.com/Alvin-Zeng/DRN)
+     ```
+       https://pan.baidu.com/s/1Sn0GYpJmiHa27m9CAN12qw
+       password:smil
+     ```
 
   
 ### Audio Caption Datasets
