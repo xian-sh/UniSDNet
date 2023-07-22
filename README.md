@@ -12,8 +12,13 @@
       rm charades_data.tar.gz
     ```
 * Download the video C3D feature of Charades-STA dataset from [DRN](https://github.com/Alvin-Zeng/DRN)
-       ```https://pan.baidu.com/s/1Sn0GYpJmiHa27m9CAN12qw```
-          password:```smil```
+    ```
+      https://pan.baidu.com/s/1Sn0GYpJmiHa27m9CAN12qw
+    ```
+       password:
+    ```
+      smil
+    ```
      
 
   
