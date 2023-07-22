@@ -14,14 +14,9 @@
 * Download the video C3D feature of Charades-STA dataset from [DRN](https://github.com/Alvin-Zeng/DRN)
     ```
       https://pan.baidu.com/s/1Sn0GYpJmiHa27m9CAN12qw
+      password:smil
     ```
-       password:
-    ```
-      smil
-    ```
-     
 
-  
 ### Audio Caption Datasets
 
 * **ActivityNet Speech Dataset:** download the [original audio](https://drive.google.com/file/d/11f6sC94Swov_opNfpleTlVGyLJDFS5IW/view?usp=sharing) proposed by [VGCL](https://github.com/marmot-xy/Spoken-Video-Grounding)
