@@ -1,0 +1,62 @@
+MODEL:
+  ARCHITECTURE: "DTF"
+  DTF:
+    NUM_CLIPS: 128
+    JOINT_SPACE_SIZE: 256
+    FEATPOOL:
+      INPUT_SIZE: 500
+      HIDDEN_SIZE: 512
+      KERNEL_SIZE: 4
+    FEAT2D:
+      NAME: "pool"
+      POOLING_COUNTS: [15,8,8,8]
+    TEXT_ENCODER:
+      NAME: 'BERT'
+    PREDICTOR:
+      HIDDEN_SIZE: 512
+      KERNEL_SIZE: 5
+      NUM_STACK_LAYERS: 3
+    LOSS:
+      MIN_IOU: 0.3
+      MAX_IOU: 0.7
+      NUM_POSTIVE_VIDEO_PROPOSAL: 3
+      NEGATIVE_VIDEO_IOU: 0.5
+      SENT_REMOVAL_IOU: 0.5
+      TAU_VIDEO: 0.1
+      TAU_SENT: 0.1
+      MARGIN: 0.1
+      CONTRASTIVE_WEIGHT: 0.1
+OUTPUT_DIR: "./tacos/glove/full_model_new"
+DATASETS:
+  NAME: "tacos"
+  TRAIN: ("tacos_train",)
+  TEST: ("tacos_test",)
+INPUT:
+  NUM_PRE_CLIPS: 512
+DATALOADER:
+  NUM_WORKERS: 0
+SOLVER:
+  LR: 0.0015
+  BATCH_SIZE: 2
+  MILESTONES: (130, 190)
+  MAX_EPOCH: 250
+  TEST_PERIOD: 10
+  CHECKPOINT_PERIOD: 10
+  RESUME: True
+  RESUME_EPOCH: 211
+  FREEZE_BERT: 400
+  ONLY_IOU: 100
+  SKIP_TEST: 0
+  USE_STATIC: True
+  USE_GNN: True
+  GNN_SPARSE: True
+  GNN_MODE: 'gauss'   # 'gauss' or 'd' or 'gat'
+  GNN_LAYERS: 2
+  GNN_U: 5.0
+  GNN_STEP: 0.1
+  POS_EMBED: 'sine'   # choices=['trainable', 'sine', 'learned']
+TEST:
+  NMS_THRESH: 0.4
+  BATCH_SIZE: 2
+  CONTRASTIVE_SCORE_POW: 0.3
+
