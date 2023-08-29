@@ -27,7 +27,7 @@ MODEL:
       TAU_SENT: 0.1
       MARGIN: 0.3
       CONTRASTIVE_WEIGHT: 0.1
-OUTPUT_DIR: "./activity/dist/gnn/text_cos_1"
+OUTPUT_DIR: "./activity/dist/full_model"
 DATASETS:
   NAME: "activitynet"
   TRAIN: ("activitynet_train", )
@@ -51,7 +51,7 @@ SOLVER:
   USE_STATIC: True
   USE_GNN: True
   GNN_SPARSE: True
-  GNN_MODE: 'cos_gauss'   # 'gauss' or 'd' or 'gat' or 'mlp'
+  GNN_MODE: 'gauss'   # 'gauss' or 'd' or 'gat' or 'mlp'
   GNN_LAYERS: 2
   GNN_U: 5.0
   GNN_STEP: 0.1
