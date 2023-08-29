@@ -1,10 +1,15 @@
+'''
+Note the dependency package torch for sentence_transformers is version 2.0.1, 
+it is recommended to create a new Conda environment and then
+pip install sentence_transformers
+'''
+
 import os
 import json
 import torch
 from tqdm import tqdm
 from sentence_transformers import SentenceTransformer
 from transformers import AutoTokenizer, Data2VecTextModel, DistilBertModel
-
 
 def text_glove_feat_extract(text_path, text_dir):
     model = SentenceTransformer('sentence-transformers/average_word_embeddings_glove.6B.300d')  # 'sentence-transformers/average_word_embeddings_glove.840B.300d'
