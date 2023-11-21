@@ -11,7 +11,7 @@ Our work actually proposes a new paradigm to establish a two-stage unified stati
 - Processing multimodal signals in a unified ResMLP network, while many previous works are independently encoding the language modality and video modality [R1-R7, R9-R12].
 - After the implementation of the above static ResMLP, we introduce a Gaussian nonlinear filtering method to learn the semantic associations within the video and combine it with the back-end proposal generation to promote cross-modal semantic alignment, further developing the proposal-based TVG method.
 
-Our work is inspired by visual perception biology. This unified static and dynamic two-layer architecture performs excellent joint learning of language and video, which achieves state-of-the-art performance on NLVG and SLVG tasks. 
+Our work is inspired by visual perception biology. This unified static and dynamic two-stage architecture performs excellent joint learning of language and video, which achieves state-of-the-art performance on NLVG and SLVG tasks. 
 The ablation experiments in **Table 4** of our manuscript demonstrate the effectiveness of each proposed component of this work. We will improve our manuscript based on your constructive suggestions.
 
 **Eﬀiciency and performance:** Technology-wise, the inference efficiency of our model comes from a streamlined architecture design, which allows for parallel inference of video and multiple queries in a unified ResMLP, saving time and expenses.
