@@ -15,7 +15,7 @@ Thank you for raising the concerns about the motivation of static network. We wo
 
 - **Technology-wise**,  we concatenate multiple queries and video clips together as a sequence input into the network for fully connected interaction of all tokens, its main function is to supplement and associate semantics between modalities before the latter graph filtering, provide more video descriptions information and significantly fill the gap between vision-language modalities, aiding in understanding video content.
 
-- **Experiment-wise**, as per your valuable suggestion, we have tested the effect of Transformer as a static network as shown in the table below (**Table R6**), and as you are concerned, Reviewer 'TT77' has also focused on the ablation study of the static module. From the results, in terms of performance and efficiency, Transformer is close to our method, but our results are better. We speculate that the reason is that our network also includes the second stage of graph filtering. The static network uses a lightweight and stable network, which is more conducive to model training. Using Transformer as a static network increases the weight and instability factors of the network. 
+- **Experiment-wise**, as per your valuable suggestion, we have tested the effect of Transformer as a static network as shown in the table below (**Table R6**), and as you are concerned, Reviewer 'TT77' has also focused on the ablation study of the static module. From the results, in terms of performance and efficiency, Transformer is close to our method, but our results are better. We speculate that the reason is that our network also includes the second stage of graph filtering. The static network uses a lightweight and stable network, which is more conducive to model training. Using Transformer as a static network increases the weight and instability factors [R20] of the network. 
 
 **Table R6: Results of different static networks on the ActivityNet Captions.**
 
@@ -29,6 +29,8 @@ Thank you for raising the concerns about the motivation of static network. We wo
 [R15] Volzhenin et al., Multilevel development of cognitive abilities in an artificial neural network. Proceedings of the National Academy of Sciences, 119(39), pp. e2201304119, 2022.
 
 [R19] Chavlis et al., Drawing inspiration from biological dendrites to empower artificial neural networks. Current opinion in neurobiology. 70, pp. 1-10, 2021. 
+
+[R20] Hugo et al., Resmlp: Feedforward networks for image classification with data-efficient training. TPAMI, 45(4):5314–5321, 2022.
 
 
 The Response to Reviewer GE2s (Part 2/3)
@@ -57,18 +59,18 @@ Thank you for your detailed comments. Compared to other graph methods, our dynam
 We infer that a large part of this is due to the different feature characteristics of text and audio.
 In our experiments, we use DistilBERT as textual features and Data2vec as audio features, where DistilBERT is an acknowledged high-quality textual features. 
 For the NLVG task, the performance improvement with high-quality features brought by the method development is approaching saturation.
-In this case, while the R@1, IoU@0.7 indicator increases by 1\%, it indeed means a significant improvement for NLVG. 
+In this case, if the R@1, IoU@0.7 indicator increases by 1\%, it indeed means a significant improvement for NLVG. 
 As for SLVG, current works are relatively rare, and the audio-video interaction has the potential to be developed deeply. 
 
 
 The Response to Reviewer GE2s (Part 3/3)
 
-> **Q4: The proposed method is well validated in the datasets with one-to-one matching between queries and moments. How would it perform for one-to-many matching datasets, such as QVHighlights [R20]?**
+> **Q4: The proposed method is well validated in the datasets with one-to-one matching between queries and moments. How would it perform for one-to-many matching datasets, such as QVHighlights [R21]?**
 
 **A4:**
 Thanks for pointing out the excellent work of QVHighlights and constructive comments. 
 QVHighlights is a recently publicized dataset for both moment retrieval (MR) and highlight detection (HD) tasks.  
-Following the practice [R20, R21], the commonly used metric is Recall@K, IoU=[0.5, 0.7].
+Following the practice [R21, R22], the commonly used metric is Recall@K, IoU=[0.5, 0.7].
 As your valuable suggestion, we have tested our model on this dataset. Current works on the QVHighlights dataset have undergone multi-task learning, including both MR and HD tasks. 
 However, due to the urgent rebuttal deadline, we only complete our model evaluation for the MR single task mode on this dataset. 
 We have listed the reported results of exiting works for the MR single task in **Table R8** and compared ours with theirs. From the results and facts, there are some conclusions. 
@@ -76,23 +78,23 @@ We have listed the reported results of exiting works for the MR single task in *
 - Our method still performs the best with signle MR task test in one-to-many query matching mode.
 This also proves that the good universality of our model for the task setup of one query to multiple moments retrieval, in which each query corresponds to multiple moments retrieval.
 
-- To be applicable to both HD and MR tasks, M-DETR [R20] and UMT [R21] are extended on the basis of the DETR method with the learnable moment queries. We adopt the typical 2D temporal proposal infrastructure and our methods still performs well in solving one-to-many matching MR task. This demonstrates our model's advantage of high precision (R@1, IoU@0.7 is 40.39, much higher than the 33.82 of UMT, and 25.87 of M-DETR).
+- To be applicable to both HD and MR tasks, M-DETR [R21] and UMT [R22] are extended on the basis of the DETR method with the learnable moment queries. We adopt the typical 2D temporal proposal infrastructure and our methods still performs well in solving one-to-many matching MR task. This demonstrates our model's advantage of high precision (R@1, IoU@0.7 is 40.39, much higher than the 33.82 of UMT, and 25.87 of M-DETR).
 
-- In the future, we will continue to collaborate with HD tasks, whose multi-task joint training method has been proven to further promote the MR results [R21],
+- In the future, we will continue to collaborate with HD tasks, whose multi-task joint training method has been proven to further promote the MR results [R22],
 and will finish this comparison with fair conditions and believe that we will have better performance. 
 
 **Table R8: Comparison with the state-of-art for one-to-many query matching on QVHighlights for single MR task.**
 | Method       |        Venue | Task | Video | R@1, IoU@0.5 | R@1, IoU@0.7  | 
 | :---------- | :----------  | :----------:  | :----------:  | :----------:  | :----------:  | 
-| M-DETR [R20] | NeurIPS 2021 | Single MR task | Slowfast + CLIP | 44.84   |    25.87    | 
-| UMT [R21]    | CVPR 2022    | Single MR task | Slowfast + CLIP | 54.14   |    33.82    | 
+| M-DETR [R21] | NeurIPS 2021 | Single MR task | Slowfast + CLIP | 44.84   |    25.87    | 
+| UMT [R22]    | CVPR 2022    | Single MR task | Slowfast + CLIP | 54.14   |    33.82    | 
 | **Ours**     |       | **Single MR task** | **Slowfast + CLIP** | **54.58**   |    **40.39**   | 
 
 **References:**
 
-[R20] Lei et al., QVHighlights: Detecting Moments and Highlights in Videos via Natural Language Queries. NeurIPS, pp. 11846--11858, 2021.
+[R21] Lei et al., QVHighlights: Detecting Moments and Highlights in Videos via Natural Language Queries. NeurIPS, pp. 11846--11858, 2021.
 
-[R21] Liu et al., Umt: Unified multi-modal transformers for joint video moment retrieval and highlight detection. CVPR, pp. 3042-3051, 2022.
+[R22] Liu et al., Umt: Unified multi-modal transformers for joint video moment retrieval and highlight detection. CVPR, pp. 3042-3051, 2022.
 
 
 > **Q5: The manuscript contains some formatting errors due to the excessively small margins between captions and the main text.**
