@@ -6,8 +6,7 @@ Thanks for your insightful and constructive feedback on our manuscript. Your pos
   
 > **Q1: The introduction reads like a related work. It will be great to make more comparison between this work and previous work. Answering what is wrong with previous works? and where the efficiency and performance gain come from in this paper?**
 
-**A1:**  
-Thanks for your valuable suggestion. Technology-wise, previous methods mostly focus on solving a certain aspect of the Temporal Video Grounding (TVG) task, such as representation learning of language and video self-modality [R1, R2], multimodal fusion [R3, R4], cross-modal interaction [R5, R6], proposal candidate generation [R7, R8], proposal-based cross-modal matching [R9, R10], target moment boundary regression [R11, R12], and so on.
+**A1:** Thanks for your valuable suggestion. Technology-wise, previous methods mostly focus on solving a certain aspect of the Temporal Video Grounding (TVG) task, such as representation learning of language and video self-modality [R1, R2], multimodal fusion [R3, R4], cross-modal interaction [R5, R6], proposal candidate generation [R7, R8], proposal-based cross-modal matching [R9, R10], target moment boundary regression [R11, R12], and so on.
 Our work actually proposes a new paradigm to establish a two-stage unified static and dynamic semantic complementary new architecture. Its unique characteristics are that
 - Processing multimodal signals in a unified ResMLP network, while many previous works are independently encoding the language modality and video modality [R1-R7, R9-R12].
 - After the implementation of the above static ResMLP, we introduce a Gaussian nonlinear filtering method to learn the semantic associations within the video and combine it with the back-end proposal generation to promote cross-modal semantic alignment, further developing the proposal-based TVG method.
@@ -26,11 +25,11 @@ Our promising model performance mainly comes from our model's comprehensive info
 
 [R3] Li et al., Proposal-free video grounding with contextual pyramid network. AAAI, pp, 1902–1910, 2021. 
 
-[R4] Liu et al., Exploring optical-flow-guided motion and detection-based appearance for temporal sentence grounding. IEEE Transactions on Multimedia, 2023.
+[R4] Liu et al., Exploring optical-flow-guided motion and detection-based appearance for temporal sentence grounding. IEEE TMM, 2023.
 
 [R5] Liu et al., Jointly cross-and self-modal graph attention network for query-based moment localization. ACM MM, pp. 4070–4078, 2020.
 
-[R6] Sun et al., Video moment retrieval via comprehensive relation-aware network. IEEE Transactions on Circuits and Systems for Video Technology, 2023.
+[R6] Sun et al., Video moment retrieval via comprehensive relation-aware network. IEEE TCSVT, 2023.
 
 [R7] Zhang et al., Learning 2d temporal adjacent networks for moment localization with natural language. AAAI, pp. 12870–12877, 2020.
 
@@ -40,7 +39,7 @@ Our promising model performance mainly comes from our model's comprehensive info
 
 [R10] Zheng et al., Phrase-level temporal relationship mining for temporal sentence localization. AAAI, pp. 3669–3677, 2023.
 
-[R11] Zhang et al., Natural language video localization: A revisit in span-based question answering framework. IEEE Transactions on Pattern Analysis and Machine Intelligence, 44(8):4252–4266, 2021.
+[R11] Zhang et al., Natural language video localization: A revisit in span-based question answering framework. IEEE TPAMI, 44(8), pp. 4252–4266, 2021.
 
 [R12] Liu et al., Skimming, locating, then perusing: A human-like framework for natural language video localization. ACM MM, pp. 4536–4545, 2022.
 
@@ -50,13 +49,11 @@ The Response to Reviewer TT77 (Part 2/3)
 
 > **Q2: This paper introduces some new/confusing terminologies with their own definition, which hurts the reading experience. For example, 'static semantic supplement network' and 'activity-silent mechanism' are actually the global context interaction.**
 
-**A2:**
-Thanks for your friendly reminder.
-To clear up your confusion, we clarify and revise some confusing representations as below.
+**A2:** Thanks for your friendly reminder. To clear up your confusion, we clarify and revise some confusing representations as below.
 
-**1) `static semantic supplement network':** This is the network naming in terms of function, because in our work, we focus on understanding video content in a multimodal environment [R13], and we adopt a unified framework of static and dynamic structures. In the early stage, this global interaction mode first perceives all multimodal information, and then information filtering is performed. In terms of the functionality of the static network for video understanding, it provides more video descriptions information and significantly fills the gap between vision-language modalities, aiding in understanding video content.
+**1) 'static semantic supplement network':** This is the network naming in terms of function, because in our work, we focus on understanding video content in a multimodal environment [R13], and we adopt a unified framework of static and dynamic structures. In the early stage, this global interaction mode first perceives all multimodal information, and then information filtering is performed. In terms of the functionality of the static network for video understanding, it provides more video descriptions information and significantly fills the gap between vision-language modalities, aiding in understanding video content.
 
-**2) 'activity-silent mechanism':** This is the mechanism by which the brain processes information in the early stages of human visual perception for the video, as mentioned in [R14]. It manifests as a static multi-source information interaction, achieving the "global broadcast communication" of the brain. Because we are strongly inspired by this mechanism in static network design, we specifically mentioned this professional biological term in our manuscript. This network can achieve the effect of `the global context interaction' from a technical perspective, and this is the basic intention for our network design. 
+**2) 'activity-silent mechanism':** This is the mechanism by which the brain processes information in the early stages of human visual perception for the video, as mentioned in [R14]. It manifests as a static multi-source information interaction, achieving the 'global broadcast communication' of the brain. Because we are strongly inspired by this mechanism in static network design, we specifically mentioned this professional biological term in our manuscript. This network can achieve the effect of 'the global context interaction' from a technical perspective, and this is the basic intention for our network design. 
 
 We will incorporate your suggestion and consider both motivation and technical introduction in the paper.
 
@@ -87,21 +84,20 @@ The reviewer suggested we consider more long-range filters in our studies, there
 The results indicate that: 
 - ResMLP achieves model performance/efficiency trade-offs.
 - Note that the S4 model is particularly skilled in handling very long (about 1w) sequence tasks, but in the ActivityNet Captions dataset of NLVG tasks, the total number of video clips and queries does not exceed 100, which may be the reason why it is not suitable for our task.
-- The performance of Transformer is close to ResMLP, but its "Infer. Speed" cost is 2.67 times that of ResMLP. In terms of better performance and efficiency, we choose ResMLP as the implementation of the static network.
+- The performance of Transformer is close to ResMLP, but its 'Infer. Speed' cost is 2.67 times that of ResMLP. In terms of better performance and efficiency, we choose ResMLP as the implementation of the static network.
 
   
 > **Q4: No notation for the 'FNN'. Is this the feedforward network?**
 
-**A4:** Yes, it is. `FNN' is the abbreviation of feedforward network. We have unified the expression of FNN and added a full name explanation in the paper.
+**A4:** Yes, it is. 'FNN' is the abbreviation of feedforward network. We have unified the expression of FNN and added a full name explanation in the paper.
 
 
 > **Q5: In the Figure 5, no notation/description for 'D'.**
 
 **A5:**
 The following is a description of **D**, and we will provide a clearer explanation of **D** in the paper.
-In the setting of **D**, we use the message aggregation wight $f_{ij}=1/(d_{ij}+1)$ to replace $f_{ij}=\mathcal{F}_{filter}(d_{ij})$, which indicates that we still consider the clue of temporal distance $d_{ij}$ between two nodes but remove the entire Gaussian filtering calculation from our method. 
-This replacement results in a decrease of 0.42 and 1.92 on "R@1, IoU@0.7" for NLVG and SLVG, respectively. 
-
+In the setting of **D**, we use the message aggregation wight $f_{ij}=1/(d_{ij}+1)$ to replace $f_{ij}$=$\mathcal{F}\_{filter}(d_{ij})$, which indicates that we still consider the clue of temporal distance $d_{ij}$ between two nodes but remove the entire Gaussian filtering calculation from our method. 
+This replacement results in a decrease of 0.42 and 1.92 on R@1, IoU@0.7 for NLVG and SLVG, respectively. 
 
   
 The Response to Reviewer TT77 (Part 3/3)
@@ -113,7 +109,7 @@ The Response to Reviewer TT77 (Part 3/3)
 Thank you for your valuable feedback. In our consideration, using a Gaussian filter is necessary for the following reasons. 
 
 - In the process of human visual perception of the video, the processing of temporal relationships between video clips is complex, we must choose a non-linear modeling approach.
--  Brain processing of temporal relationships between video clips has three characteristics: 1) Nonlinearity; 2) High-dimensional; 3) Short-term Effect; 4) Relative Temporal Distance Decay. The current video clip has $h$ Gaussian filters on both temporal directions that gradually decrease in correlation, which can reflect the visual persistence phenomenon when people browse videos. That is, the recent past has a significant impact on their perception of the present.
+-  Brain processing of temporal relationships between video clips has four characteristics: 1) Nonlinearity; 2) High-dimensional; 3) Short-term Effect; 4) Relative Temporal Distance Decay. The current video clip has $h$ Gaussian filters on both temporal directions that gradually decrease in correlation, which can reflect the visual persistence phenomenon when people browse videos. That is, the recent past has a significant impact on their perception of the present.
 
 Due to the **dynamic nature, continuity (high-dimensional), and nonlinearity (complexity)** of visual perception transmission, the discrete scalar $d_{ij}$ is insufficient to express these characteristics. 
 Therefore, we use filter generating networks to generate filters dynamically. 
