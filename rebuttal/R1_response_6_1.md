@@ -4,7 +4,7 @@ Thanks for your recognition of our proposed Dynamic Temporal Filter Network, and
 
 > **Q1: In ResMLP, visual features and multiple query features are concatenated and fed into the network, largely leveraging the information leakage between different queries (because the features incorporate more accurate textual information that describes the video content). If each query is individually input into the network, would this method exhibit a significant performance degradation?**
 
-**A1:** Thank you for your valuable feedback. Here, we attempt to clarify our conclusion from the following two aspects. On one hand, regardless multi-query or single-query modes, the role of Multilayer perceptron with residual design (ResMLP) is designed to capture the associations between query and video, simulating the brain's processing of multi-source information in the early stage of visual perception. On the other hand, yes, we agree with your opinion that multiple queries can indeed provide more semantics to the video and significantly fill the gap between vision-language modalities, aiding in understanding video content.  
+**A1:** Thank you for your valuable feedback. Here, we attempt to clarify our conclusion from the following two aspects. On one hand, regardless multi-query or single-query modes, the role of Multilayer perceptron with residual design (ResMLP) is designed to capture the associations between query and video, simulating the brain's processing of multi-source information in the early stage of visual perception for the video. On the other hand, yes, we agree with your opinion that multiple queries can indeed provide more semantics to the video and significantly fill the gap between vision-language modalities, aiding in understanding video content.  
 To eliminate your concern, we have supplemented the relevant experiments and found two facts in **Table R1**:
 
 - Our model still performs best in single-query input mode, compared to other single query methods. For example, our R@1, IoU@0.7 is 32.25, exceeding the current SOTA methods.
@@ -33,8 +33,8 @@ In our manuscript, we propose a method that starts with static global review que
 On the one hand, observing the experimental results of our static module alone (ResMLP) compared with existing works (in Tables 1 and 4 of our manuscript), previous works have overlooked and performed insufficiently in extracting information from global static reviews.
 On the other hand, even if the static review information is missed and only basic cross-modal information is obtained, we achieve good video grounding results using the dynamic module (DTFNet) alone. **Effective information filtering method (DTFNet)** can still extract useful information.
 
-For convenience, we restate Table 4 of our manuscript in the following **Table R2**. Relatively speaking, the large performance improvement of a single module through the respective exploration of multimodal information has reached **saturation** (the R@1, IoU@0.3 of ResMLP and DTFNet are 73.57 and 74.56, respectively.). 
-In this case, the R@1, IoU@0.7 of a single module increases from 73.57/74.56 to the final static-dynamic combination of 75.85, which is not a small improvement. 
+For convenience, we restate Table 4 of our manuscript in the following **Table R2**. Relatively speaking, the large performance improvement of a single module through the respective exploration of multimodal information has reached **saturation** (for NLVG task, the R@1, IoU@0.3 of ResMLP and DTFNet are 73.57 and 74.56, respectively.). 
+In this case, the R@1, IoU@0.3 of a single module increases from 73.57/74.56 to the final static-dynamic combination of 75.85, which is not a small improvement. 
 That's why the effect of combining ResMLP and DTFNet is not as much improved as employing them alone.
 This further demonstrates the effectiveness of our static and dynamic modules. 
 
