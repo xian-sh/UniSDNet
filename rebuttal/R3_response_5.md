@@ -33,13 +33,12 @@ The Response to Reviewer Z5of (Part 2/3)
 > **Q2: When expanding a single gaussian kernel to multi-kernel Gaussian, it seems that only the bias z is sweeping? Have you tried different $\gamma$?**
 
 **A2:** Thank you for the valuable feedback. 
-Considering to better model the continuity and complexity of visual perception transmission, **a single-kernel Gaussian filter** is insufficient to reflect the comprehensive degree of event associations in the video [R13]. We adopt **multi-kernel Gaussian filters** as a rich **Filter-generating-networks** architecture to extend the scalar $d_{ij}$ to high-dimensional space to achieve the goal. 
+Considering to better model the continuity and complexity of visual perception transmission, **a single-kernel Gaussian filter** is insufficient to reflect the comprehensive degree of event associations in the video [R14]. We adopt **multi-kernel Gaussian filters** as a rich **Filter-generating-networks** architecture to extend the scalar $d_{ij}$ to high-dimensional space to achieve the goal. 
 In this work, we employ the multi-kernel Gaussian $\phi_k(x)=exp(-\gamma(x-z_k)^2),  k \in [1, h]$, and there are three variables ($z_k,h,\gamma$): different bias $\{z_k\}$ for total $h$ Gaussian kernels and a Gaussian coefficient $\gamma$, where $z_k$ is a bias to avoid a plateau at the beginning of training due to the highly correlated Gaussian filters. 
-% and $\gamma$ is the parameter that controls the gradient descent speed of the function value. 
 To meet the constraint of nonlinear correlated Gaussian kernels, we randomly set biases $z_k$ at equal intervals (e.g., 0.1 or 0.2) starting from 0.0, sweep the value of $h$ from 25 to 200 (see the ablation experiment Table 9 in Appendix and the best setting is $h=50$) and set the global range of $\{z_k\}$ values to $[0, 5]$ in our experiments.
 
 As per your valuable suggestion, we add new experiments about different $\gamma$ in **Table R4**. Gaussian coefficient $\gamma$ reflects the amplitude of Gaussian kernel function that controls the gradient descent speed of the function value.
-It can be find that from Table R1, when $\gamma=25.0$, our model achieves the best performance (in bold font of Table R1). We also list the average and standard deviation of the five experimental results of $\gamma=\{5.0, 10.0, 25.0, 50.0, 70.0\}$. 
+It can be find that from **Table R4**, when $\gamma=25.0$, our model achieves the best performance (in bold font of **Table R4**). We also list the average and standard deviation of the five experimental results of $\gamma=\{5.0, 10.0, 25.0, 50.0, 70.0\}$. 
 We select $\gamma=10.0$ as the empirical setting as its result (with *italic* in **Table R4**) is closest to the average *avg.*. To summarize, in our experiments, the final settings of variables  ($h,\gamma$) are set to 50 and 10.0, and $\{z_k\}$ is set at an equal interval of 0.1. 
 We will add this new ablation and more explanation to the paper.
 
