@@ -1,8 +1,35 @@
 # Unified Static and Dynamic:Temporal Filtering Network for Efficient Video grounding
 
 
+**Task Example:** Video grounding task (query: text or audio). The video is described by four queries (events), all of which have separate semantic context and temporal dependency. Other queries can provide global context (antecedents and consequences) for the current query (e.g. query Q4). Besides, historical similar scenarios (such as in blue dashed box) help to discover relevant event clues (time and semantic clues) for understanding the current scenario (blue solid box).
 
-### Video Datasets
+<div align="center">
+  <img src="./assets/intro.png" alt="Table of Contents" width="800" height="250">
+</div>
+
+## Approach
+
+The architecture of the UniSDNet. It mainly consists of static and dynamic networks: Static Semantic Supplement Network (S3Net) and Dynamic Temporal Filtering Network (DTFNet). S3Net concatenates video clips and multiple queries into a sequence and encodes them through a lightweight single-stream ResMLP network. DTFNet is a 2-layer graph network with a dynamic Gaussian filtering convolution mechanism, which is designed to control message passing between nodes by considering temporal distance and semantic relevance as the Gaussian filtering clues when updating node features. The role of 2D temporal map is to retain possible candidate proposals and represent them by aggregating the features of each proposal moment. Finally, we perform semantic matching between the queries and proposals and rank the best ones as the predictions.
+
+<div align="center">
+  <img src="./assets/main_structure.png" alt="Approach" width="800" height="210">
+</div>
+
+## Usage
+
+
+- [Download Video Datasets](#download-video-datasets)
+ 
+- [Download Audio Captions](#download-audio-captions)
+  
+- [Dependencies](#dependencies)
+
+- [Acknowledgement](#acknowledgement)
+
+- [LICENSE](#license)
+
+
+### Download Video Datasets
 
 * Download the [video feature](https://rochester.app.box.com/s/8znalh6y5e82oml2lr7to8s6ntab6mav)  provided by [2D-TAN](https://github.com/microsoft/2D-TAN)
 * Download the video I3D feature of Charades-STA dataset from [LGI](https://github.com/JonghwanMun/LGI4temporalgrounding)
@@ -18,7 +45,7 @@
       password:smil
     ```
 
-### Audio Caption Datasets
+### Download Audio Captions
 
 * **ActivityNet Speech Dataset:** download the [original audio](https://drive.google.com/file/d/11f6sC94Swov_opNfpleTlVGyLJDFS5IW/view?usp=sharing) proposed by [VGCL](https://github.com/marmot-xy/Spoken-Video-Grounding)
 * **Charades-STA Speech Dataset:** download the [original audio](https://zenodo.org/record/8019213) proposed by us.
