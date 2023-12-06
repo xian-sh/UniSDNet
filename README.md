@@ -15,12 +15,10 @@ The architecture of the UniSDNet. It mainly consists of static and dynamic netwo
   <img src="./assets/main_structure.png" alt="Approach" width="800" height="210">
 </div>
 
-## Usage
+## Getting Started
 
-
-- [Download Video Datasets](#download-video-datasets)
+- [Download and prepare the datasets](#download-and-prepare-the-datasets)
  
-- [Download Audio Captions](#download-audio-captions)
   
 - [Dependencies](#dependencies)
 
@@ -29,27 +27,54 @@ The architecture of the UniSDNet. It mainly consists of static and dynamic netwo
 - [LICENSE](#license)
 
 
-### Download Video Datasets
+### Download and prepare the datasets
 
-* Download the [video feature](https://rochester.app.box.com/s/8znalh6y5e82oml2lr7to8s6ntab6mav)  provided by [2D-TAN](https://github.com/microsoft/2D-TAN)
-* Download the video I3D feature of Charades-STA dataset from [LGI](https://github.com/JonghwanMun/LGI4temporalgrounding)
+* **The [video feature](https://rochester.app.box.com/s/8znalh6y5e82oml2lr7to8s6ntab6mav)  provided by [2D-TAN](https://github.com/microsoft/2D-TAN)**
+    ```
+      ActivityNet Captions C3D feature
+      Charades-STA VGG feature
+      TACoS C3D feature
+    ```
+* **The video I3D feature of Charades-STA dataset from [LGI](https://github.com/JonghwanMun/LGI4temporalgrounding)**
      ```
       wget http://cvlab.postech.ac.kr/research/LGI/charades_data.tar.gz
       tar zxvf charades_data.tar.gz
       mv charades data
       rm charades_data.tar.gz
     ```
-* Download the video C3D feature of Charades-STA dataset from [DRN](https://github.com/Alvin-Zeng/DRN)
+* **The video C3D feature of Charades-STA dataset from [DRN](https://github.com/Alvin-Zeng/DRN)**
     ```
       https://pan.baidu.com/s/1Sn0GYpJmiHa27m9CAN12qw
       password:smil
     ```
+* **The Audio Captions: ActivityNet Speech Dataset**: download the [original audio](https://drive.google.com/file/d/11f6sC94Swov_opNfpleTlVGyLJDFS5IW/view?usp=sharing) proposed by [VGCL](https://github.com/marmot-xy/Spoken-Video-Grounding)
 
-### Download Audio Captions
+* **The Audio Captions: Charades-STA Speech Dataset**: download the [original audio](https://zenodo.org/record/8019213) proposed by us.
 
-* **ActivityNet Speech Dataset:** download the [original audio](https://drive.google.com/file/d/11f6sC94Swov_opNfpleTlVGyLJDFS5IW/view?usp=sharing) proposed by [VGCL](https://github.com/marmot-xy/Spoken-Video-Grounding)
-* **Charades-STA Speech Dataset:** download the [original audio](https://zenodo.org/record/8019213) proposed by us.
-* **TACoS Speech Dataset:** download the [original audio](https://zenodo.org/record/8022063) proposed by us.
+* **The Audio Captions: TACoS Speech Dataset**: download the [original audio](https://zenodo.org/record/8022063) proposed by us. 
+
+* Prepare the files in the following structure
+```
+UniSDNet
+├── configs
+├── dataset
+├── dtfnet
+├── data
+│   ├── activitynet
+│   │   ├── *audio features
+│   │   └── *c3d features
+│   ├── charades
+│   │   ├── *audio features
+│   │   ├── *vgg features
+│   │   ├── *c3d features
+│   │   └── *i3d features
+│   └── tacos
+│       ├── *audio features
+│       └── *c3d features
+├── train_net.py
+├── test_net.py
+└── ···
+```
 
 ### Dependencies
 
