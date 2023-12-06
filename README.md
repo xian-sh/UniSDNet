@@ -1,4 +1,5 @@
-# Unified Static and Dynamic:Temporal Filtering Network for Efficient Spoken Video Grounding
+# Unified Static and Dynamic:Temporal Filtering Network for Efficient Video grounding
+
 
 
 ### Video Datasets
