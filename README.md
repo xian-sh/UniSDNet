@@ -1,7 +1,7 @@
 # UniSDNet
 
 
-This repository maintains the official implementation of the paper **Unified Static and Dynamic:Temporal Filtering Network for Efficient Video Grounding** by JIngjing Hu, which has been accepted by ICLR 2024.
+This repository maintains the official implementation of the paper **Unified Static and Dynamic:Temporal Filtering Network for Efficient Video Grounding**.
 
 **Task Example:** Video grounding task (query: text or audio). The video is described by four queries (events), all of which have separate semantic context and temporal dependency. Other queries can provide global context (antecedents and consequences) for the current query (e.g. query Q4). Besides, historical similar scenarios (such as in blue dashed box) help to discover relevant event clues (time and semantic clues) for understanding the current scenario (blue solid box).
 
