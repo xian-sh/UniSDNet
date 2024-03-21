@@ -26,8 +26,8 @@ The architecture of the UniSDNet. It mainly consists of static and dynamic netwo
 ## 📢 To be updated
 ### Todo
 - [x] : Upload instruction for dataset download
-- : Update model zoo
-- : Upload implementation
+- [ ] : Update model zoo
+- [ ] : Upload implementation
 
 ## 📑 Download and prepare the datasets
 
