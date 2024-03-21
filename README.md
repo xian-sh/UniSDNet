@@ -104,6 +104,16 @@ For training, run the shell below:
 bash   
 ```
 
+## 📦 Model Zoo 
+Dataset | Model file
+ -- | -- 
+ActivityNet Captions | [x](x)
+Charades-STA (I3D) | [x](x)
+Charades-STA (VGG) | [x](x)
+TACoS | [x](x)
+ActivityNet Speech | [x](x)
+Charades-STA Speech (I3D) | [x](x)
+TACoS Speech | [x](x)
 
 ## 📖 BibTeX 
 If you find the repository or the paper useful, please use the following entry for citation.
