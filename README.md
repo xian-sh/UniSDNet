@@ -23,10 +23,12 @@ The architecture of the UniSDNet. It mainly consists of static and dynamic netwo
 </div>
 
 ----------
-## Todo
+## To be updated
 - [x] : Upload instruction for dataset download
-- [ ] : Update model zoo
-- [ ] : Upload implementation
+- [x] : Upload implementation
+- [ ] : Update training and testing instructions
+- [ ] : Update trained model
+
 
 ----------
 
@@ -105,7 +107,7 @@ For training, run the shell below:
 bash   
 ```
 
-#### Testing
+## Testing
 Our trained model are provided in [baiduyun, passcode:xmc0](xx) or [Google Drive](xx). Please download them to the `checkpoints/best/` folder.
 Use the following commands for testing:
 - For TACoS dataset, run: 
