@@ -14,7 +14,7 @@
  <img src="./assets/intro.png" width="80%">
 </p>
 
-## Approach
+## 🔖 Approach
 
 The architecture of the UniSDNet. It mainly consists of static and dynamic networks: Static Semantic Supplement Network (S3Net) and Dynamic Temporal Filtering Network (DTFNet). S3Net concatenates video clips and multiple queries into a sequence and encodes them through a lightweight single-stream ResMLP network. DTFNet is a 2-layer graph network with a dynamic Gaussian filtering convolution mechanism, which is designed to control message passing between nodes by considering temporal distance and semantic relevance as the Gaussian filtering clues when updating node features. The role of 2D temporal map is to retain possible candidate proposals and represent them by aggregating the features of each proposal moment. Finally, we perform semantic matching between the queries and proposals and rank the best ones as the predictions.
 
@@ -29,7 +29,7 @@ The architecture of the UniSDNet. It mainly consists of static and dynamic netwo
 - : Update model zoo
 - : Upload implementation
 
-## Download and prepare the datasets
+## 📑 Download and prepare the datasets
 
 **1. Download the datasets.**
    
