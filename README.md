@@ -144,7 +144,7 @@ Use the following commands for testing:
 | ---- |:-------------:| :-----:|:-----:|:-----:|
 | **RaNet** | x | x | x | x |
 
-## 📖 BibTeX 
+## BibTeX 
 If you find the repository or the paper useful, please use the following entry for citation.
 ```
 @article{unified2024hu ,
@@ -155,7 +155,7 @@ If you find the repository or the paper useful, please use the following entry f
 }
 ```
 
-## ☎️ Contributors and Contact
+## ☎️ Contact
 If there are any questions, feel free to contact the author: Jingjing Hu (xianhjj623@gmail.com)
 
 ## ☑️ LICENSE
