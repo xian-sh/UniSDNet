@@ -14,7 +14,7 @@
  <img src="./assets/intro.png" width="80%">
 </p>
 
-## 🔖 Approach
+## Approach
 
 The architecture of the UniSDNet. It mainly consists of static and dynamic networks: Static Semantic Supplement Network (S3Net) and Dynamic Temporal Filtering Network (DTFNet). S3Net concatenates video clips and multiple queries into a sequence and encodes them through a lightweight single-stream ResMLP network. DTFNet is a 2-layer graph network with a dynamic Gaussian filtering convolution mechanism, which is designed to control message passing between nodes by considering temporal distance and semantic relevance as the Gaussian filtering clues when updating node features. The role of 2D temporal map is to retain possible candidate proposals and represent them by aggregating the features of each proposal moment. Finally, we perform semantic matching between the queries and proposals and rank the best ones as the predictions.
 
@@ -23,13 +23,14 @@ The architecture of the UniSDNet. It mainly consists of static and dynamic netwo
 </div>
 
 ----------
-## 📢 To be updated
-### Todo
+## Todo
 - [x] : Upload instruction for dataset download
 - [ ] : Update model zoo
 - [ ] : Upload implementation
 
-## 📑 Download and prepare the datasets
+----------
+
+## Download and prepare the datasets
 
 **1. Download the datasets.**
    
@@ -82,7 +83,7 @@ The architecture of the UniSDNet. It mainly consists of static and dynamic netwo
       └── ···
 
 
-## 🛠️ Dependencies
+## Dependencies
 
     pip install yacs h5py terminaltables tqdm librosa transformers
     conda install pytorch==1.11.0 torchvision==0.12.0 torchaudio==0.11.0 cudatoolkit=11.3 -c pytorch
@@ -90,7 +91,7 @@ The architecture of the UniSDNet. It mainly consists of static and dynamic netwo
     conda install pytorch-geometric -c rusty1s -c conda-forge
 
 
-## 🚀 Training
+## Training
 ### Charades-STA
 For training, run the shell below:
 ```
@@ -104,16 +105,42 @@ For training, run the shell below:
 bash   
 ```
 
-## 📦 Model Zoo 
-Dataset | Model file
- -- | -- 
-ActivityNet Captions | [x](x)
-Charades-STA (I3D) | [x](x)
-Charades-STA (VGG) | [x](x)
-TACoS | [x](x)
-ActivityNet Speech | [x](x)
-Charades-STA Speech (I3D) | [x](x)
-TACoS Speech | [x](x)
+#### Testing
+Our trained model are provided in [baiduyun, passcode:xmc0](xx) or [Google Drive](xx). Please download them to the `checkpoints/best/` folder.
+Use the following commands for testing:
+- For TACoS dataset, run: 
+```bash
+    sh test_tacos.sh
+```
+- For ActivityNet-Captions dataset, run:
+```bash
+    sh test_activitynet.sh
+```
+- For Charades-STA dataset, run:
+```bash
+    sh test_charades.sh
+```
+
+## Main results:
+
+| **TACoS** | Rank1@0.3 | Rank1@0.5 | Rank5@0.3 | Rank5@0.5 |
+| ---- |:-------------:| :-----:|:-----:|:-----:|
+| **RaNet** |  x | x |  x | x |
+</br>
+
+| **ActivityNet** | Rank1@0.5 | Rank1@0.7 | Rank5@0.6 | Rank5@0.7 |
+| ---- |:-------------:| :-----:|:-----:|:-----:|
+| **RaNet** | x | x | x | x |
+</br>
+
+| **Charades (VGG)**  | Rank1@0.5 | Rank1@0.7 | Rank5@0.5 | Rank5@0.7 |
+| ---- |:-------------:| :-----:|:-----:|:-----:|
+| **RaNet** | x | x | x | x |
+</br>
+
+| **Charades (I3D)**  | Rank1@0.5 | Rank1@0.7 | Rank5@0.5 | Rank5@0.7 |
+| ---- |:-------------:| :-----:|:-----:|:-----:|
+| **RaNet** | x | x | x | x |
 
 ## 📖 BibTeX 
 If you find the repository or the paper useful, please use the following entry for citation.
