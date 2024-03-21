@@ -3,11 +3,18 @@
 
 This repository maintains the official implementation of the paper **Unified Static and Dynamic:Temporal Filtering Network for Efficient Video Grounding**.
 
+
+> Jingjing Hu, Dan Guo, Kun Li, Zhan Si, Xun Yang, Xiaojun Chang and Meng Wang
+> Hefei University of Technology
+
+##### [Arxiv](https://arxiv.org/abs/2311.08835)
+
+
 **Task Example:** Video grounding task (query: text or audio). The video is described by four queries (events), all of which have separate semantic context and temporal dependency. Other queries can provide global context (antecedents and consequences) for the current query (e.g. query Q4). Besides, historical similar scenarios (such as in blue dashed box) help to discover relevant event clues (time and semantic clues) for understanding the current scenario (blue solid box).
 
-<div align="center">
-  <img src="./assets/intro.png" alt="Table of Contents" width="800" height="250">
-</div>
+<p align="center">
+ <img src="./assets/intro.png" width="80%">
+</p>
 
 ## Approach
 
@@ -21,8 +28,8 @@ The architecture of the UniSDNet. It mainly consists of static and dynamic netwo
 ## 📢 To be updated
 ### Todo
 - [x] : Upload instruction for dataset download
-- [] : Update model zoo
-- [] : Upload implementation
+- : Update model zoo
+- : Upload implementation
 
 ## Download and prepare the datasets
 
@@ -83,6 +90,22 @@ The architecture of the UniSDNet. It mainly consists of static and dynamic netwo
     conda install pytorch==1.11.0 torchvision==0.12.0 torchaudio==0.11.0 cudatoolkit=11.3 -c pytorch
     conda config --add channels pytorch
     conda install pytorch-geometric -c rusty1s -c conda-forge
+
+
+## 🚀 Training
+### Charades-STA
+For training, run the shell below:
+```
+bash  
+bash   
+```
+
+### TACoS
+For training, run the shell below:
+```
+bash   
+```
+
 
 ## 📖 BibTeX 
 If you find the repository or the paper useful, please use the following entry for citation.
