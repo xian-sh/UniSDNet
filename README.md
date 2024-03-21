@@ -1,7 +1,4 @@
-# UniSDNet
-
-
-This repository maintains the official implementation of the paper **Unified Static and Dynamic:Temporal Filtering Network for Efficient Video Grounding**.
+# Unified Static and Dynamic:Temporal Filtering Network for Efficient Video Grounding
 
 
 > Jingjing Hu, Dan Guo, Kun Li, Zhan Si, Xun Yang, Xiaojun Chang and Meng Wang
