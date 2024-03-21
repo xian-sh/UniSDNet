@@ -17,19 +17,14 @@ The architecture of the UniSDNet. It mainly consists of static and dynamic netwo
   <img src="./assets/main_structure.png" alt="Approach" width="800" height="210">
 </div>
 
-## Getting Started
+----------
+## 📢 To be updated
+### Todo
+- [x] : Upload instruction for dataset download
+- [] : Update model zoo
+- [] : Upload implementation
 
-- [Download and prepare the datasets](#download-and-prepare-the-datasets)
- 
-  
-- [Dependencies](#dependencies)
-
-- [Acknowledgement](#acknowledgement)
-
-- [LICENSE](#license)
-
-
-### Download and prepare the datasets
+## Download and prepare the datasets
 
 **1. Download the datasets.**
    
@@ -82,13 +77,28 @@ The architecture of the UniSDNet. It mainly consists of static and dynamic netwo
       └── ···
 
 
-
-### Dependencies
+## 🛠️ Dependencies
 
     pip install yacs h5py terminaltables tqdm librosa transformers
     conda install pytorch==1.11.0 torchvision==0.12.0 torchaudio==0.11.0 cudatoolkit=11.3 -c pytorch
     conda config --add channels pytorch
     conda install pytorch-geometric -c rusty1s -c conda-forge
 
-### Acknowledgement
+## 📖 BibTeX 
+If you find the repository or the paper useful, please use the following entry for citation.
+```
+@article{unified2024hu ,
+  title={Unified Static and Dynamic Network: Efficient Temporal Filtering for Video Grounding},
+  author={Hu, Jingjing and Guo, Dan and Li, Kun and Si, Zhan and Yang, Xun and Chang, Xiaojun and Wang, Meng},
+  journal={arXiv preprint arXiv:xxx},
+  year={2024}
+}
+```
+
+## ☎️ Contributors and Contact
+If there are any questions, feel free to contact the author: Jingjing Hu (xianhjj623@gmail.com)
+
+## ☑️ LICENSE
+The annotation files and many parts of the implementations are borrowed from [MMN](https://github.com/MCG-NJU/MMN).
+Our codes are under [MIT](https://opensource.org/licenses/MIT) license.
 
