@@ -70,20 +70,26 @@ The architecture of the UniSDNet. It mainly consists of static and dynamic netwo
       ├── dtfnet
       ├── data
       │   ├── activitynet
+      │   │   ├── *text features
       │   │   ├── *audio features
       │   │   └── *c3d features
       │   ├── charades
+      │   │   ├── *text features
       │   │   ├── *audio features
       │   │   ├── *vgg features
       │   │   ├── *c3d features
       │   │   └── *i3d features
       │   └── tacos
+      │       ├── *text features
       │       ├── *audio features
       │       └── *c3d features
       ├── train_net.py
       ├── test_net.py
       └── ···
 
+**3. Or set your own dataset path in the following .py file.**
+
+      dtfnet/config/paths_catalog.py
 
 ## Dependencies
 
