@@ -123,42 +123,71 @@ Use the following commands for testing:
     sh test_charades.sh
 ```
 
-## Main results:
+## Main NLVG Results:
 
-| **TACoS** | Rank1@0.3 | Rank1@0.5 | Rank5@0.3 | Rank5@0.5 |
-| ---- |:-------------:| :-----:|:-----:|:-----:|
-| **RaNet** |  x | x |  x | x |
+| **ActivityNet Captions** | Rank1@0.5 | Rank1@0.7 | Rank5@0.5 | Rank5@0.7 | mIoU|
+| ---- |:-------------:| :-----:|:-----:|:-----:|:-----:|
+| **UniSDNet-M** | 60.75 | 38.88 | 85.34 | 74.01 | 55.47|
 </br>
 
-| **ActivityNet** | Rank1@0.5 | Rank1@0.7 | Rank5@0.6 | Rank5@0.7 |
-| ---- |:-------------:| :-----:|:-----:|:-----:|
-| **RaNet** | x | x | x | x |
+| **TACoS** | Rank1@0.3 | Rank1@0.5 | Rank5@0.3 | Rank5@0.5 | mIoU|
+| ---- |:-------------:| :-----:|:-----:|:-----:|:-----:|
+| **UniSDNet-M** |  55.56 | 40.26 |  77.08 | 64.01 | 38.88|
 </br>
 
-| **Charades (VGG)**  | Rank1@0.5 | Rank1@0.7 | Rank5@0.5 | Rank5@0.7 |
-| ---- |:-------------:| :-----:|:-----:|:-----:|
-| **RaNet** | x | x | x | x |
+| **Charades-STA (VGG)**  | Rank1@0.5 | Rank1@0.7 | Rank5@0.5 | Rank5@0.7 | mIoU|
+| ---- |:-------------:| :-----:|:-----:|:-----:|:-----:|
+| **UniSDNet-M** | 48.41 | 28.33 | 84.76 | 59.46 | 44.41|
 </br>
 
-| **Charades (I3D)**  | Rank1@0.5 | Rank1@0.7 | Rank5@0.5 | Rank5@0.7 |
-| ---- |:-------------:| :-----:|:-----:|:-----:|
-| **RaNet** | x | x | x | x |
+| **Charades-STA (C3D)**  | Rank1@0.5 | Rank1@0.7 | Rank5@0.5 | Rank5@0.7 | mIoU|
+| ---- |:-------------:| :-----:|:-----:|:-----:|:-----:|
+| **UniSDNet-M** | 49.57 | 28.39 | 84.70 | 58.49 | 44.29|
+</br>
+
+| **Charades-STA (I3D)**  | Rank1@0.5 | Rank1@0.7 | Rank5@0.5 | Rank5@0.7 | mIoU|
+| ---- |:-------------:| :-----:|:-----:|:-----:|:-----:|
+| **UniSDNet-M** | 61.02 | 39.70 | 89.97 | 73.20 | 52.69|
+
+
+## Main SLVG Results:
+
+
+| **ActivityNet Speech** | Rank1@0.3 | Rank1@0.5 | Rank1@0.7 | Rank5@0.3 |Rank5@0.5 | Rank5@0.7 | mIoU|
+| ---- |:-------------:| :-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| **UniSDNet-M** | 72.27 | 56.29 | 33.29 | 90.41 | 84.28| 72.42 | 52.22|
+</br>
+
+| **TACoS Speech** | Rank1@0.3 | Rank1@0.5 | Rank1@0.7 | Rank5@0.3 |Rank5@0.5 | Rank5@0.7 | mIoU|
+| ---- |:-------------:| :-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| **UniSDNet-M** | 51.66 | 37.77 |  20.44 | 76.38 | 63.48 | 33.64 | 36.86 |
+</br>
+
+| **Charades-STA Speech(VGG)**  | Rank1@0.3 | Rank1@0.5 | Rank1@0.7 | Rank5@0.3 |Rank5@0.5 | Rank5@0.7 | mIoU|
+| ---- |:-------------:| :-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| **UniSDNet-M** | 60.73 | 46.37 | 26.72 | 92.66 | 82.31 | 57.66 | 42.28 |
+</br>
+
+| **Charades-STA (I3D)**  | Rank1@0.3 | Rank1@0.5 | Rank1@0.7 | Rank5@0.3 |Rank5@0.5 | Rank5@0.7 | mIoU|
+| ---- |:-------------:| :-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| **UniSDNet-M** | 67.45 | 53.82 | 34.49 | 94.81 | 87.90 | 69.30 | 48.27 |
 
 ## BibTeX 
 If you find the repository or the paper useful, please use the following entry for citation.
 ```
-@article{unified2024hu ,
+@article{hu2024unified,
   title={Unified Static and Dynamic Network: Efficient Temporal Filtering for Video Grounding},
-  author={Hu, Jingjing and Guo, Dan and Li, Kun and Si, Zhan and Yang, Xun and Chang, Xiaojun and Wang, Meng},
-  journal={arXiv preprint arXiv:xxx},
-  year={2024}
+  author={Jingjing Hu and Dan Guo and Kun Li and Zhan Si and Xun Yang and Xiaojun Chang and Meng Wang},
+  year={2024},
+  Journal={CoRR},
+  volume={abs/2403.14174},
 }
 ```
 
-## ☎️ Contact
+## Contact
 If there are any questions, feel free to contact the author: Jingjing Hu (xianhjj623@gmail.com)
 
-## ☑️ LICENSE
+## LICENSE
 The annotation files and many parts of the implementations are borrowed from [MMN](https://github.com/MCG-NJU/MMN).
 Our codes are under [MIT](https://opensource.org/licenses/MIT) license.
 
