@@ -34,7 +34,7 @@ The architecture of the UniSDNet. It mainly consists of static and dynamic netwo
 
 ## Download and prepare the datasets
 
-**1. Download the datasets.**
+**1. Download the datasets.** (For convenience, all pre-extracted dataset features can be obtained at x)
    
 * The [video feature](https://rochester.app.box.com/s/8znalh6y5e82oml2lr7to8s6ntab6mav)  provided by [2D-TAN](https://github.com/microsoft/2D-TAN)
     
