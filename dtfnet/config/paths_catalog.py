@@ -7,9 +7,9 @@ class DatasetCatalog(object):
 
     DATASETS = {
         "tacos_train":{
-            "audio_dir": "/hujingjing2/data/TACoS/audio_data2vec_feat",
+            "audio_dir": "/hujingjing2/data/TACoS/audio_data2vec_feat",        # text or audio feature path
             "ann_file": "./dataset/TACoS/train_audio_new.json",
-            "feat_file": "/hujingjing2/data/TACoS/tall_c3d_features.hdf5",
+            "feat_file": "/hujingjing2/data/TACoS/tall_c3d_features.hdf5",     # video feature path
         },
         "tacos_val":{
             "audio_dir": "/hujingjing2/data/TACoS/audio_data2vec_feat",
@@ -39,16 +39,12 @@ class DatasetCatalog(object):
         "charades_train": {
             "audio_dir": "/hujingjing2/data/Charades_STA/text_distbert_feat",
             "ann_file": "./dataset/Charades_STA/train_audio_new.json",
-#            "feat_file": "G:/Dataset/data/Charades_STA/vgg_rgb_features.hdf5",
-#            "feat_file": "/hujingjing2/data/Charades_STA/C3D_unit16_overlap0.5",
             "feat_file": "/hujingjing2/data/data/features/i3d_finetuned",
             
         },
         "charades_test": {
             "audio_dir": "/hujingjing2/data/Charades_STA/text_distbert_feat",
             "ann_file": "./dataset/Charades_STA/test_audio_new.json",
-#            "feat_file": "G:/Dataset/data/Charades_STA/vgg_rgb_features.hdf5",
-#            "feat_file": "/hujingjing2/data/Charades_STA/C3D_unit16_overlap0.5",
              "feat_file": "/hujingjing2/data/data/features/i3d_finetuned",
             
         },
@@ -60,7 +56,7 @@ class DatasetCatalog(object):
         attrs = DatasetCatalog.DATASETS[name]
         
         if "charades" in name and cfg.MODEL.DTF.VIDEO_MODE == 'vgg':
-            attrs["feat_file"] = "/hujingjing2/data/Charades_STA/vgg_rgb_features.hdf5"
+            attrs["feat_file"] = "/hujingjing2/data/Charades_STA/vgg_rgb_features.hdf5"     # change this path with your own charades video feature path
         if "charades" in name and cfg.MODEL.DTF.VIDEO_MODE == 'c3d':
             attrs["feat_file"] = "/hujingjing2/data/Charades_STA/C3D_unit16_overlap0.5"
             
