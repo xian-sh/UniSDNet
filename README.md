@@ -26,7 +26,7 @@ The architecture of the UniSDNet. It mainly consists of static and dynamic netwo
 ## To be updated
 - [x] : Upload instruction for dataset download
 - [x] : Upload implementation
-- [ ] : Update training and testing instructions
+- [x] : Update training and testing instructions
 - [ ] : Update trained model
 
 
@@ -100,33 +100,20 @@ The architecture of the UniSDNet. It mainly consists of static and dynamic netwo
 
 
 ## Training
-### Charades-STA
-For training, run the shell below:
+
+For training, run the python instruction below:
+
 ```
-bash  
-bash   
+python train_net.py --config-file configs/xxxx.yaml 
 ```
 
-### TACoS
-For training, run the shell below:
-```
-bash   
-```
 
 ## Testing
 Our trained model are provided in [baiduyun, passcode:xmc0](xx) or [Google Drive](xx). Please download them to the `checkpoints/best/` folder.
 Use the following commands for testing:
-- For TACoS dataset, run: 
-```bash
-    sh test_tacos.sh
+
 ```
-- For ActivityNet-Captions dataset, run:
-```bash
-    sh test_activitynet.sh
-```
-- For Charades-STA dataset, run:
-```bash
-    sh test_charades.sh
+    python test_net.py --config-file xxxx.yaml   --ckpt   xxxx.pth
 ```
 
 ## Main NLVG Results:
