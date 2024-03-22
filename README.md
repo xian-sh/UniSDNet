@@ -66,7 +66,7 @@ The architecture of the UniSDNet. It mainly consists of static and dynamic netwo
 **2. Pre-extracted dataset features.**
 
         https://pan.baidu.com/xxxx
-        password:smil
+        password:xxxx
  
 **3. Prepare the files in the following structure.**
    
