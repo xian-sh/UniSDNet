@@ -35,7 +35,7 @@ The architecture of the UniSDNet. It mainly consists of static and dynamic netwo
 
 ## Download and prepare the datasets
 
-**1. Download the datasets.** (For convenience, all pre-extracted dataset features can be obtained at x)
+**1. Download the original datasets (optional).** 
    
 * The [video feature](https://rochester.app.box.com/s/8znalh6y5e82oml2lr7to8s6ntab6mav)  provided by [2D-TAN](https://github.com/microsoft/2D-TAN)
     
@@ -63,7 +63,12 @@ The architecture of the UniSDNet. It mainly consists of static and dynamic netwo
 
 * The Audio Captions: TACoS Speech Dataset: download the [original audio](https://zenodo.org/record/8022063) proposed by us. 
 
-**2. Prepare the files in the following structure.**
+**2. Pre-extracted dataset features.**
+
+        https://pan.baidu.com/xxxx
+        password:smil
+ 
+**3. Prepare the files in the following structure.**
    
       UniSDNet
       ├── configs
@@ -88,7 +93,7 @@ The architecture of the UniSDNet. It mainly consists of static and dynamic netwo
       ├── test_net.py
       └── ···
 
-**3. Or set your own dataset path in the following .py file.**
+**4. Or set your own dataset path in the following .py file.**
 
       dtfnet/config/paths_catalog.py
 
