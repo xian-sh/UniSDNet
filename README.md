@@ -113,7 +113,7 @@ Our trained model are provided in [baiduyun, passcode:xmc0](xx) or [Google Drive
 Use the following commands for testing:
 
 ```
-    python test_net.py --config-file xxxx.yaml   --ckpt   xxxx.pth
+python test_net.py --config-file xxxx.yaml   --ckpt   xxxx.pth
 ```
 
 ## Main NLVG Results:
