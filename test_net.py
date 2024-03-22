@@ -11,7 +11,7 @@ from dtfnet.utils.logger import setup_logger
 
 def main():
     torch.multiprocessing.set_sharing_strategy('file_system')
-    parser = argparse.ArgumentParser(description="Mutual Matching Network")
+    parser = argparse.ArgumentParser(description="DTFNet")
     parser.add_argument(
         "--config-file",
         default="activity/text_new_230919/text_1_3w/config.yml",
@@ -59,7 +59,7 @@ def main():
     output_dir = cfg.OUTPUT_DIR
     checkpointer = MmnCheckpointer(cfg, model, save_dir=output_dir)
 #     ckpt = cfg.MODEL.WEIGHT if args.ckpt is None else args.ckpt
-    _ = checkpointer.load('/hujingjing2/DTFNet_Audio/activity/text_new_230919/text_1_3w/pool_b_model_9e.pth', use_latest=args.ckpt is None)
+    _ = checkpointer.load(args.ckpt, use_latest=args.ckpt is None)
 
     dataset_names = cfg.DATASETS.TEST
     data_loaders_val = make_data_loader(cfg, is_train=False, is_distributed=distributed)[0]
