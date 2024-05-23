@@ -27,7 +27,7 @@ The architecture of the UniSDNet. It mainly consists of static and dynamic netwo
 - [x] : Upload instruction for dataset download
 - [x] : Upload implementation
 - [x] : Update training and testing instructions
-- [ ] : Provide access to pre-extracted features of all data
+- [x] : Provide access to pre-extracted features of all data
 - [ ] : Update trained model
 
 
