@@ -115,7 +115,7 @@ python train_net.py --config-file configs/xxxx.yaml
 
 
 ## Testing
-Our trained model are provided in [baiduyun, passcode:xmc0](xx) or [Google Drive](xx). Please download them to the `checkpoints/best/` folder.
+Our trained model are provided in [baiduyun, passcode:d4yl](https://pan.baidu.com/s/1FLzAPACOfcK_xDewZoXAkg?pwd=d4yl) or [Google Drive](xx). Please download them to the `checkpoints/best/` folder.
 Use the following commands for testing:
 
 ```
