@@ -176,13 +176,15 @@ python test_net.py --config-file checkpoints/best/xxxx.yaml   --ckpt   checkpoin
 ## BibTeX 
 If you find the repository or the paper useful, please use the following entry for citation.
 ```
-@article{hu2024unified,
-  title={Unified Static and Dynamic Network: Efficient Temporal Filtering for Video Grounding},
-  author={Jingjing Hu and Dan Guo and Kun Li and Zhan Si and Xun Yang and Xiaojun Chang and Meng Wang},
-  year={2024},
-  Journal={CoRR},
-  volume={abs/2403.14174},
-}
+@ARTICLE{10955430,
+  author={Hu, Jingjing and Guo, Dan and Li, Kun and Si, Zhan and Yang, Xun and Chang, Xiaojun and Wang, Meng},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence}, 
+  title={Unified Static and Dynamic Network: Efficient Temporal Filtering for Video Grounding}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={1-18},
+  doi={10.1109/TPAMI.2025.3558854}}
 ```
 
 ## Contact
